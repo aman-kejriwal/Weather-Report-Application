@@ -137,8 +137,8 @@ public class MainActivity extends AppCompatActivity {
                         JSONObject jsonpart = jsonArray.getJSONObject(i);
                         Log.d("aman","lumar");
                         JSONObject sys=jsonObject.getJSONObject("sys");
-                        long set=sys.getLong("sunset");
-                        long rise=sys.getLong("sunrise");
+                        long set=sys.getLong("sunset")*1000;
+                        long rise=sys.getLong("sunrise")*1000;
                         DateFormat dateFormat = new SimpleDateFormat("HH:mm a");
                         Date time = new Date(set);
                         sunset=dateFormat.format(time);
